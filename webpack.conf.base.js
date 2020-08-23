@@ -23,6 +23,14 @@ module.exports = {
         use: [ MiniCssExtractPlugin.loader, 'css-loader', 'stylus-loader' ]
       },
       {
+        test: /\.(png|jpe?g|gif|svg)$/i,
+        loader: 'file-loader',
+        options: {
+          outputPath: project.images.dist.root,
+          name: '[name].[ext]'
+        }
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: 'babel-loader'
@@ -33,6 +41,7 @@ module.exports = {
     alias: {
       '@vue$': 'vue/dist/vue.esm.js',
       '@environment$': `${__dirname}/${project.environments.source.root}/${env}.js`,
+      '@images': `${__dirname}/${project.images.source.root}`,
       '@scripts': `${__dirname}/${project.scripts.source.root}`,
       '@styles': `${__dirname}/${project.styles.source.root}`,
 
@@ -47,7 +56,7 @@ module.exports = {
     }),
     new CopyWebpackPlugin([{
       from: project.images.source.files,
-      to: project.images.dist.root
+      to: `${project.images.dist.root}/[name].[ext]`
     }])
   ]
 }

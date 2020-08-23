@@ -16,13 +16,13 @@ module.exports = {
   moduleNameMapper: {
     '@vue$': 'vue/dist/vue.common.js',
     '@environment$': `<rootDir>/${project.environments.source.root}/${env}.js`,
+    '@images\/(.*)$': `${__dirname}/${project.images.source.root}$1`,
     '@scripts\/(.*)$': `<rootDir>/${project.scripts.source.root}$1`,
-    '@styles\/(.*)$': `<rootDir>/${project.styles.source.root}$1`,
-    '^.+\\.(css|styl)$': '<rootDir>/src/scripts/base/mocks/raw-files.js'
+    '@styles\/(.*)$': `<rootDir>/${project.styles.source.root}$1`
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   transform: {
-    '^.+\\.(css|styl)$': '<rootDir>/src/scripts/base/mocks/raw-files.js',
+    '^.+\\.(css|styl|png|jpe?g|gif|svg)$': '<rootDir>/src/scripts/base/mocks/raw-files.js',
     '^.+\\.js$': 'babel-jest',
     '^.+\\.html$': 'html-loader-jest'
   }
