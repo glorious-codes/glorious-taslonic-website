@@ -1,5 +1,8 @@
 # Taslonic's Website
 
+[![CircleCI](https://circleci.com/gh/glorious-codes/glorious-taslonic-website.svg?style=svg)](https://circleci.com/gh/glorious-codes/glorious-taslonic-website)
+[![Coverage Status](https://coveralls.io/repos/github/glorious-codes/glorious-taslonic-website/badge.svg?branch=master)](https://coveralls.io/github/glorious-codes/glorious-taslonic-website?branch=master)
+
 ## Contributing
 
 1. Install [Node](https://nodejs.org/en/). Download the "Recommend for Most Users" version.
