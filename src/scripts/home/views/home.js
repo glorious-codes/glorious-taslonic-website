@@ -1,3 +1,5 @@
+import { tcContainer } from '@scripts/base/components/container/container';
+import { tcLogo } from '@scripts/base/components/logo/logo';
 import seoService from '@scripts/base/services/seo/seo';
 import template from './home.html';
 
@@ -9,6 +11,10 @@ const head = seoService.buildHead({
 
 const homeView = {
   name: 'tc-home-view',
+  components: {
+    tcContainer,
+    tcLogo
+  },
   head,
   template
 };
