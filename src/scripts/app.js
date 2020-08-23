@@ -4,6 +4,7 @@ import Vue from '@vue';
 import VueHead from 'vue-head';
 import VueRouter from 'vue-router';
 import Taslonic from '@glorious/taslonic/dist/vue';
+import analyticsService from '@scripts/base/services/analytics/analytics';
 import routes from '@scripts/routes';
 import template from '@scripts/app.html';
 
@@ -16,6 +17,8 @@ Vue.use(Taslonic);
 
 const router = new VueRouter({ routes, mode: 'history' });
 const app = { name: 'app', template };
+
+analyticsService.init();
 
 /* eslint-disable no-unused-vars */
 const mountedApp = new Vue({
