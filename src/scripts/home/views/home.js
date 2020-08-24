@@ -5,7 +5,7 @@ import template from './home.html';
 
 const head = seoService.buildHead({
   title: 'Taslonic',
-  description: 'A glorious UI library available for React and Vue.',
+  description: 'Glorious components for Vue & React.',
   keywords: 'taslonic, ui, components, declarative, react, vue'
 });
 
