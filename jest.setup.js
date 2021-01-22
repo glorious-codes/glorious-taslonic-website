@@ -1,7 +1,7 @@
 import { createLocalVue } from '@vue/test-utils';
-import Taslonic from '@glorious/taslonic/dist/vue';
+import taslonic from '@glorious/taslonic/vue-plugin';
 
 const Vue = createLocalVue();
-Vue.use(Taslonic);
+Vue.use(taslonic);
 
 window.globalVueInstance = Vue;
