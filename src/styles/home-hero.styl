@@ -1,0 +1,113 @@
+@require '_variables'
+@require '_mixins'
+
+$color-action = #5FFFFF
+$color-action-light = #AAFFFF
+$color-action-shadow = #405CFF
+
+.tc-home-hero
+  background rgb(255,255,255)
+  background linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(103,114,255,1) 50%)
+  overflow hidden
+  .tc-topbar-content
+    background-color $color-lightest
+
+.tc-home-hero-content
+  position relative
+  display flex
+  justify-content center
+  flex-direction column
+  margin 0 auto
+  padding 0 20px
+  max-width 800px
+  height 400px
+  background-color $color-purple
+  color $color-lightest
+  h1
+    font-size $font-size-xl
+    letter-spacing 0
+  p
+    margin-top 30px
+
+.tc-home-hero-curve
+  position absolute
+  top 0
+  left -190px
+  width 190px
+  height 450px
+  path
+    fill $color-purple
+
+.tc-home-hero-actions
+  margin-top 45px
+  z-index 1
+  .tc-link a,
+  .t-button
+    display inline-block
+    min-width 180px
+    border-radius 20px
+  .tc-link
+    a
+      margin-left 20px
+      padding 11px
+      color $color-action
+      font-size $font-size-xs
+      font-weight bold
+      text-align center
+      text-decoration none
+      line-height $font-size-sm
+      border-width 1px
+      border-style solid
+      border-color $color-action
+      box-shadow 0 0 0 $color-action-shadow
+      transition all 300ms
+      &:hover,
+      &:focus,
+      $:active
+        background-color alpha($color-purple-dark, .25)
+        color $color-action-light
+        box-shadow 0 10px 15px $color-action-shadow
+        border-color $color-action-light
+        outline 0
+  .t-button
+    box-shadow 0 0 0 $color-action-shadow
+  .t-button-primary
+    background-color $color-action
+    color $color-purple
+    border-color $color-action
+    transition all 300ms
+    &:hover,
+    &:focus,
+    $:active
+      background-color $color-action-light
+      box-shadow 0 10px 15px $color-action-shadow
+      border-color $color-action
+
++breakpoint('sm')
+  .tc-home-hero
+    .tc-topbar-content
+      display flex
+      justify-content center
+  .tc-home-hero-content
+    align-items center
+    h1
+      max-width 475px
+      text-align center
+
++breakpoint('md')
+  .tc-home-hero-content
+    padding 0
+    height 450px
+    h1
+      max-width 670px
+      font-size $font-size-xxl
+      letter-spacing -1px
+
++breakpoint('md')
+  .tc-home-hero
+    .tc-topbar-content
+      justify-content flex-start
+  .tc-home-hero-content
+    align-items flex-start
+    h1
+      text-align left

@@ -1,5 +1,8 @@
 import { tcContainer } from '@scripts/base/components/container/container';
-import { tcLogo } from '@scripts/base/components/logo/logo';
+import { tcFeatureCardList } from '@scripts/base/components/feature-card-list/feature-card-list';
+import { tcFooter } from '@scripts/base/components/footer/footer';
+import { tcTopbar } from '@scripts/base/components/topbar/topbar';
+import { tcHomeHero } from '@scripts/home/components/home-hero/home-hero';
 import seoService from '@scripts/base/services/seo/seo';
 import template from './home.html';
 
@@ -13,7 +16,10 @@ const homeView = {
   name: 'tc-home-view',
   components: {
     tcContainer,
-    tcLogo
+    tcFeatureCardList,
+    tcFooter,
+    tcTopbar,
+    tcHomeHero
   },
   head,
   template

@@ -1,0 +1,37 @@
+@require '_variables'
+@require '_mixins'
+
+.tc-topbar-content
+  position relative
+  display flex
+  align-items center
+  margin 0 auto
+  padding 0 20px
+  max-width 800px
+  height 75px
+  box-sizing border-box
+  .tc-logo
+    img
+      width 100px
+
+.tc-topbar-curve
+  display none
+
++breakpoint('sm')
+  .tc-topbar-curve
+    display block
+    position absolute
+    top 0
+    right -150px
+    width 150px
+    height 150px
+    path
+      fill $color-lightest
+
++breakpoint('md')
+  .tc-topbar-content
+    padding 0
+    height 150px
+    .tc-logo
+      img
+        width 150px

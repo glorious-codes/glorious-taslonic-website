@@ -39,7 +39,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@vue$': 'vue/dist/vue.esm.js',
+      'vue$': 'vue/dist/vue.esm.js',
       '@environment$': `${__dirname}/${project.environments.source.root}/${env}.js`,
       '@images': `${__dirname}/${project.images.source.root}`,
       '@scripts': `${__dirname}/${project.scripts.source.root}`,

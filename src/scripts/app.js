@@ -1,6 +1,6 @@
 import '@glorious/taslonic/taslonic.css';
 import '@styles/_native.styl';
-import Vue from '@vue';
+import Vue from 'vue';
 import VueHead from 'vue-head';
 import VueRouter from 'vue-router';
 import taslonic from '@glorious/taslonic/vue-plugin';
