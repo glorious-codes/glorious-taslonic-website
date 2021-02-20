@@ -1,0 +1,12 @@
+<div class="tc-feature-card">
+  <h3>{{ title }}</h3>
+  <tc-feature-icon :name="iconName" />
+  <div class="tc-feature-card-content">
+    <slot></slot>
+  </div>
+  <div class="tc-feature-card-action">
+    <tc-link :route-name="actionRouteName" :href="actionHref">
+      {{ actionText }}
+    </tc-link>
+  </div>
+</div>
