@@ -1,59 +1,51 @@
-<tc-container>
-  <t-row>
-    <t-col>
-      <tc-logo />
-    </t-col>
-  </t-row>
-  <t-row offset="8">
-    <t-col>
-      <h1>
-        Develop calmly.
-      </h1>
-    </t-col>
-  </t-row>
-  <t-row>
-    <t-col>
-      <p>
-        Component-based architecture was one of the awesome things that happen
-        to the front-end development in the last years. But little by little,
-        those early and simple components have started to give place to truly
-        complex ones. The initial awesomeness is sadly getting lost as we see
-        that components are no longer fun as they used to be.
-      </p>
-      <p>
-        Taslonic is a set of declarative components that aims to radically
-        change this. A custom component tag should be as simple as any
-        native tag. It’s a matter of respect for the true spirit of the web.
-        Also, Taslonic comes in with a shining and live documentation where you
-        can practice what we mean.
-      </p>
-      <p>
-        It’s still in progress, but you can check and collaborate with it. Are
-        you hooked? Spread the word and help us make the <em>
-        component-as-simple-as-native-html</em> movement stronger.
-      </p>
-    </t-col>
-  </t-row>
-  <t-row offset="4">
-    <t-col sm="6">
-      <t-button
-        tag="a"
-        theme="primary"
-        href="https://components.taslonic.com"
-        target="_blank"
-        block>
-        Components
-      </t-button>
-    </t-col>
-    <t-col sm="6">
-      <t-button
-        tag="a"
-        theme="secondary"
-        href="https://github.com/glorious-codes/glorious-taslonic"
-        target="_blank"
-        block>
-        Github
-      </t-button>
-    </t-col>
-  </t-row>
-</tc-container>
+<div>
+  <tc-home-hero />
+  <tc-container>
+    <t-row offset="10" align="center">
+      <t-col sm="8" md="6">
+        <h2 id="learn-more">
+          Your time is precious. Use it wisely.
+        </h2>
+      </t-col>
+    </t-row>
+    <t-row offset="5" align="center">
+      <t-col sm="8" md="6">
+        <p>
+          When you build a front-end application, you spend most of the time
+          executing ordinary tasks. You create and validate forms, fetch data,
+          show errors and confirmation messages, among other not really exciting
+          things.
+        </p>
+        <p>
+          Those ordinary tasks, which very fastly become tedious tasks, sadly
+          take too much time. And spending too much time on something that is
+          not engaging does not result in delightful outputs. The hard truth
+          is, while cars are going driverless, we programmers still forget to
+          focus on the required field that is preventing the user from
+          submitting a form.
+        </p>
+        <p>
+          Have you ever imagined if form controls had an attribute called
+          validations that could validate themselves automatically on form
+          submit? If success message was just one more attribute accepted by
+          the form tag? Have you ever wondered not having to worry about
+          showing or hiding a loader because the form tag itself is smart
+          enough to take care of this? This is what a glorious library does
+          for you.
+        </p>
+        <p>
+          Taslonic is glorious not because it’s reinventing how selects work
+          or because it makes your interface fancy. But because it takes away
+          the trivial work, allowing you to invest most of your time in
+          chasing exceptional results.
+        </p>
+      </t-col>
+    </t-row>
+    <t-row offset="10">
+      <t-col>
+        <tc-feature-card-list />
+      </t-col>
+    </t-row>
+  </tc-container>
+  <tc-footer />
+</div>
