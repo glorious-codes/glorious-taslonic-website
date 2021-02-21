@@ -10,6 +10,7 @@ $color-action-shadow = #405CFF
   background linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(103,114,255,1) 50%)
   overflow hidden
   .tc-topbar-content
+    justify-content center
     background-color $color-lightest
 
 .tc-home-hero-content
@@ -20,12 +21,13 @@ $color-action-shadow = #405CFF
   margin 0 auto
   padding 0 20px
   max-width 800px
-  height 400px
+  height 450px
   background-color $color-purple
   color $color-lightest
+  text-align center
   h1
-    font-size $font-size-xl
-    letter-spacing 0
+    font-size 28px
+    letter-spacing -1px
   p
     margin-top 30px
 
@@ -39,16 +41,18 @@ $color-action-shadow = #405CFF
     fill $color-purple
 
 .tc-home-hero-actions
+  display flex
+  flex-direction column
   margin-top 45px
+  width 100%
   z-index 1
   .tc-link a,
   .t-button
     display inline-block
-    min-width 180px
     border-radius 20px
   .tc-link
     a
-      margin-left 20px
+      min-width 100px
       padding 11px
       color $color-action
       font-size $font-size-xs
@@ -70,6 +74,7 @@ $color-action-shadow = #405CFF
         border-color $color-action-light
         outline 0
   .t-button
+    min-width 180px
     box-shadow 0 0 0 $color-action-shadow
   .t-button-primary
     background-color $color-action
@@ -83,6 +88,35 @@ $color-action-shadow = #405CFF
       box-shadow 0 10px 15px $color-action-shadow
       border-color $color-action
 
+.tc-home-hero-star-action-container
+  display flex
+  align-items center
+  justify-content center
+  margin 20px 0 0
+
+.tc-home-hero-star-action-list
+  margin 0 0 0 10px
+  padding 0
+  list-style-type none
+  li
+    display inline-block
+    width 30px
+    height 30px
+    background-size contain
+    border-radius 15px
+    overflow hidden
+    text-indent -1000px
+    & + li
+      margin-left -12px
+      white-space nowrap
+
+.tc-home-hero-star-action-more
+  position relative
+  top -3px
+  left 6px
+  color $color-purple-dark
+  font-weight bold
+
 +breakpoint('sm')
   .tc-home-hero
     .tc-topbar-content
@@ -91,8 +125,14 @@ $color-action-shadow = #405CFF
   .tc-home-hero-content
     align-items center
     h1
-      max-width 475px
+      max-width 550px
       text-align center
+  .tc-home-hero-actions
+    flex-direction row
+    justify-content center
+  .tc-home-hero-star-action-container
+    align-items center
+    margin 0 0 0 10px
 
 +breakpoint('md')
   .tc-home-hero-content
@@ -102,6 +142,8 @@ $color-action-shadow = #405CFF
       max-width 670px
       font-size $font-size-xxl
       letter-spacing -1px
+  .tc-home-hero-actions
+    justify-content flex-start
 
 +breakpoint('md')
   .tc-home-hero
