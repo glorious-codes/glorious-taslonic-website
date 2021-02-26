@@ -1,0 +1,82 @@
+<tc-viewport>
+  <tc-container size="sm">
+    <t-row>
+      <t-col>
+        <h1>Installation</h1>
+      </t-col>
+    </t-row>
+    <t-row>
+      <t-col>
+        <p>
+          You can install Taslonic in your project either using a <strong>Package
+          Manager</strong> or getting it directly from a <strong>CDN</strong>.
+        </p>
+      </t-col>
+    </t-row>
+    <t-row offset="10">
+      <t-col>
+        <h2>Package Manager</h2>
+      </t-col>
+    </t-row>
+    <t-row>
+      <t-col>
+        <p>
+          If you manage your project dependencies using a package manager
+          (strongly recommended), you can install Taslonic using either <strong>
+          NPM</strong> or <strong>Yarn</strong>:
+        </p>
+      </t-col>
+    </t-row>
+    <t-row>
+      <t-col>
+        <tc-code>
+          npm install --save @glorious/taslonic
+        </tc-code>
+      </t-col>
+    </t-row>
+    <t-row>
+      <t-col>
+        <tc-code>
+          yarn add @glorious/taslonic
+        </tc-code>
+      </t-col>
+    </t-row>
+    <t-row offset="5">
+      <t-col>
+        <h2>CDN</h2>
+      </t-col>
+    </t-row>
+    <t-row>
+      <t-col>
+        <p>
+          If you're not into package management or if you just wanna give
+          Taslonic a try using a standalone HTML file, you can load Taslonic
+          assets from a third-party CDN provider. There are two options: <strong>
+          JS Deliver</strong> and <strong>UNPKG</strong>.
+        </p>
+      </t-col>
+    </t-row>
+  </tc-container>
+  <tc-container>
+    <t-row offset="2">
+      <t-col>
+        <tc-code lang="xml">
+          &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@glorious/taslonic/taslonic.css&quot;&gt;
+          &lt;!-- Load one of the bundles below according the engine (react or vue) you are using in your project --&gt;
+          &lt;script src=&quot;https://cdn.jsdelivr.net/npm/@glorious/taslonic/react/index.js&quot;&gt;&lt;/script&gt;
+          &lt;script src=&quot;https://cdn.jsdelivr.net/npm/@glorious/taslonic/vue/index.js&quot;&gt;&lt;/script&gt;
+        </tc-code>
+      </t-col>
+    </t-row>
+    <t-row>
+      <t-col>
+        <tc-code lang="xml">
+          &lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/@glorious/taslonic/taslonic.css&quot;&gt;
+          &lt;!-- Load one of the bundles below according the engine (react or vue) you are using in your project --&gt;
+          &lt;script src=&quot;https://unpkg.com/@glorious/taslonic/react/index.js&quot;&gt;&lt;/script&gt;
+          &lt;script src=&quot;https://unpkg.com/@glorious/taslonic/vue/index.js&quot;&gt;&lt;/script&gt;
+        </tc-code>
+      </t-col>
+    </t-row>
+  </tc-container>
+</tc-viewport>
