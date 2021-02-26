@@ -4,7 +4,7 @@ import { tcHomeHero } from './home-hero';
 
 describe('Home Hero', () => {
   function mount(){
-    return shallowMount(tcHomeHero, { localVue: globalVueInstance });
+    return shallowMount(tcHomeHero);
   }
 
   it('should have base css class', () => {

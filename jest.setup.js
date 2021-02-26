@@ -1,7 +1,7 @@
 import { createLocalVue } from '@vue/test-utils';
-import taslonic from '@glorious/taslonic/vue-plugin';
+import VueHighlightJS from 'vue-highlight.js';
 
 const Vue = createLocalVue();
-Vue.use(taslonic);
+Vue.use(VueHighlightJS);
 
 window.globalVueInstance = Vue;

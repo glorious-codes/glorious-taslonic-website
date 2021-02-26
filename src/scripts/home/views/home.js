@@ -1,3 +1,4 @@
+import { tCol, tRow } from '@glorious/taslonic/vue';
 import { tcContainer } from '@scripts/base/components/container/container';
 import { tcFeatureCardList } from '@scripts/base/components/feature-card-list/feature-card-list';
 import { tcFooter } from '@scripts/base/components/footer/footer';
@@ -15,6 +16,8 @@ const head = seoService.buildHead({
 const homeView = {
   name: 'tc-home-view',
   components: {
+    tCol,
+    tRow,
     tcContainer,
     tcFeatureCardList,
     tcFooter,

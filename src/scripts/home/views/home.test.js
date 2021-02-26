@@ -8,7 +8,7 @@ import homeView from './home';
 
 describe('Home View', () => {
   function mount(){
-    return shallowMount(homeView, { localVue: globalVueInstance });
+    return shallowMount(homeView);
   }
 
   it('should contain a home hero', () => {

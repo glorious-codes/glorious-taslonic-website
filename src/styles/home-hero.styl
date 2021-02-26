@@ -11,6 +11,7 @@ $color-action-shadow = #405CFF
   overflow hidden
   .tc-topbar-content
     justify-content center
+    max-width 800px
     background-color $color-lightest
 
 .tc-home-hero-content
@@ -134,22 +135,35 @@ $color-action-shadow = #405CFF
     align-items center
     margin 0 0 0 10px
 
++breakpoint('sm')
+  .tc-home-hero
+    .tc-topbar-curve
+      display block
+      position absolute
+      bottom 0
+      right -150px
+      width 150px
+      height 150px
+      path
+        fill $color-lightest
+
 +breakpoint('md')
+  .tc-home-hero
+    .tc-topbar-content
+      justify-content flex-start
+      padding 0
+      height 150px
+      .tc-logo
+        img
+          width 150px
   .tc-home-hero-content
+    align-items flex-start
     padding 0
     height 450px
     h1
       max-width 670px
       font-size $font-size-xxl
       letter-spacing -1px
+      text-align left
   .tc-home-hero-actions
     justify-content flex-start
-
-+breakpoint('md')
-  .tc-home-hero
-    .tc-topbar-content
-      justify-content flex-start
-  .tc-home-hero-content
-    align-items flex-start
-    h1
-      text-align left

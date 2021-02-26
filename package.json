@@ -46,9 +46,11 @@
     "webpack-merge": "^4.2.2"
   },
   "dependencies": {
-    "@glorious/taslonic": "^1.0.6",
+    "@glorious/taslonic": "^1.1.2",
+    "highlight.js": "^9.18.5",
     "vue": "^2.6.11",
     "vue-head": "^2.2.0",
+    "vue-highlight.js": "^3.1.0",
     "vue-router": "^3.1.5"
   }
 }
