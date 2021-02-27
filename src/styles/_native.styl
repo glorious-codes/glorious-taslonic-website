@@ -12,6 +12,8 @@ body
 h1, h2, h3, h4, h5, h6
   margin 0
   font-weight bold
+  & + p
+    margin-top 20px
 
 h1
   font-size $font-size-xxl
@@ -23,7 +25,8 @@ h2
 p
   margin 0
   line-height 1.5
-  & + p
+  & + p,
+  & + .tc-code
     margin-top 20px
 
 a
