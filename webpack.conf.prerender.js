@@ -9,7 +9,8 @@ function getRoutePaths(){
   return [
     '/',
     '/get-started',
-    '/react'
+    '/react',
+    '/vue'
   ];
 }
 

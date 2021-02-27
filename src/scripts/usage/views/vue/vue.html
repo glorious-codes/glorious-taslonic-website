@@ -1,0 +1,162 @@
+<tc-viewport>
+  <tc-container size="sm">
+    <t-row>
+      <t-col>
+        <h1>Vue Usage</h1>
+        <p>
+          You can easily plug Taslonic in your Vue project. Taslonic
+          integrates smoothly with projects manually configured or generated
+          with Vue CLI.
+        </p>
+      </t-col>
+    </t-row>
+    <t-row offset="6">
+      <t-col>
+        <h2>Setup</h2>
+        <p>
+          To make the exeprience of showing dialogs easier, some of Taslonic
+          components need to compile their templates at runtime. To do so,
+          you need to make a little tweak in your project configuration.
+          Below, you can check how to make this fine adjustment on Webpack or
+          on the configuration file for an application generated with Vue CLI.
+        </p>
+      </t-col>
+    </t-row>
+    <t-row offset="3">
+      <t-col>
+        <h3>Webpack</h3>
+        <p>
+          Use the resolve configuration attribute to tell Webpack to import a
+          Vue bundle with the template compiler included.
+        </p>
+        <tc-code lang="javascript">
+          module.exports = {
+            resolve: {
+              alias: {
+                'vue$': 'vue/dist/vue.common.js',
+                // By default, Vue delivers vue.js that does not include
+                // the template compiler.
+              }
+            }
+          };
+        </tc-code>
+      </t-col>
+    </t-row>
+    <t-row offset="3">
+      <t-col>
+        <h3>Vue CLI</h3>
+        <p>
+          If you have no vue.config.js file in your project yet, create it and
+          use the runtimeCompiler configuration attribute to tell Vue CLI to
+          import a Vue bundle containing the template compiler.
+        </p>
+        <tc-code lang="javascript">
+          module.exports = {
+            runtimeCompiler: true
+          };
+        </tc-code>
+      </t-col>
+    </t-row>
+    <t-row offset="3">
+      <t-col>
+        <h2>Using Taslonic components</h2>
+        <p>
+          First of all, you need to import Taslonic CSS in the file where you
+          mount your application. In applications created with Vue CLI, that
+          file use to be named as main.js.
+        </p>
+        <tc-code lang="javascript">
+          import '@glorious/taslonic/taslonic.css'
+          import Vue from 'vue';
+          // All the other things your app needs
+
+          new Vue({ ... });
+        </tc-code>
+        <p>
+          Then, import Taslonic components wherever you need them.
+        </p>
+        <tc-code lang="xml">
+          &lt;template&gt;
+            &lt;t-button @click=&quot;openAlert&quot;&gt;
+              Click Here
+            &lt;/t-button&gt;
+          &lt;/template&gt;
+
+          &lt;script&gt;
+            import { tButton, alert } from '@glorious/taslonic/vue';
+
+            export default {
+              name: 'my-component',
+              components: {
+                tButton
+              },
+              methods: {
+                openAlert(){
+                  alert.open({ content: '&lt;p&gt;I am an &lt;strong&gt;alert&lt;/strong&gt;&lt;/p&gt;' });
+                }
+              }
+            };
+          &lt;/script&gt;
+        </tc-code>
+      </t-col>
+    </t-row>
+    <t-row offset="3">
+      <t-col>
+        <h2>Using Taslonic globally</h2>
+        <p>
+          If your project is not using ES6 modules or you just wanna give
+          Taslonic a quick try, here is how you can use Taslonic globally.
+        </p>
+      </t-col>
+    </t-row>
+  </tc-container>
+  <tc-container>
+    <t-row offset="3">
+      <t-col>
+        <tc-code lang="xml">
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+              &lt;meta charset=&quot;utf-8&quot;&gt;
+              &lt;title&gt;Taslonic: Standalone Vue&lt;/title&gt;
+              &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=5&quot;&gt;
+              &lt;link href=&quot;https://taslonic.com/images/favicon-taslonic-32x32.png?v=1&quot; rel=&quot;shortcut icon&quot;&gt;
+              &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@glorious/taslonic/taslonic.css&quot;&gt;
+              &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js&quot;&gt;&lt;/script&gt;
+              &lt;script src=&quot;https://cdn.jsdelivr.net/npm/@glorious/taslonic/vue/index.js&quot;&gt;&lt;/script&gt;
+              &lt;style media=&quot;screen&quot;&gt;
+                html, body {
+                  font-family: Arial, sans-serif;
+                }
+              &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;div data-root&gt;
+                &lt;t-button @click=&quot;openAlert&quot;&gt;
+                  Click Here
+                &lt;/t-button&gt;
+              &lt;/div&gt;
+              &lt;script type=&quot;text/javascript&quot;&gt;
+                (function(){
+                  const { tButton, alert } = taslonicVue;
+
+                  new Vue({
+                    el: '[data-root]',
+                    components: {
+                      tButton
+                    },
+                    methods: {
+                      openAlert(){
+                        alert.open({ content: '&lt;p&gt;Great, it works!&lt;/p&gt;' });
+                      }
+                    }
+                  });
+                }());
+              &lt;/script&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+        </tc-code>
+      </t-col>
+    </t-row>
+  </tc-container>
+</tc-viewport>
