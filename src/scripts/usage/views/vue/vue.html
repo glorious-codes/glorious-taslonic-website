@@ -102,6 +102,25 @@
     </t-row>
     <t-row offset="3">
       <t-col>
+        <h2>Using Taslonic as plugin</h2>
+        <p>
+          You can also use Taslonic in your Vue project as a plugin. The
+          following code register Taslonic in advance, so you  don’t need to
+          import all its components in every module you need them.
+        </p>
+        <tc-code lang="javascript">
+          import '@glorious/taslonic/taslonic.css';
+          import Vue from 'vue';
+          import taslonic from '@glorious/taslonic/vue/plugin';
+
+          Vue.use(taslonic);
+
+          new Vue({ ... });
+        </tc-code>
+      </t-col>
+    </t-row>
+    <t-row offset="3">
+      <t-col>
         <h2>Using Taslonic globally</h2>
         <p>
           If your project is not using ES6 modules or you just wanna give
