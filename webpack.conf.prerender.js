@@ -8,7 +8,8 @@ _public.getRoutes = () => {
 function getRoutePaths(){
   return [
     '/',
-    '/get-started'
+    '/get-started',
+    '/react'
   ];
 }
 

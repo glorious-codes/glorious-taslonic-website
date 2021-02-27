@@ -1,5 +1,6 @@
 import homeView from '@scripts/home/views/home';
 import installView from '@scripts/install/views/install';
+import reactView from '@scripts/usage/views/react/react';
 
 const routes = [
   {
@@ -11,6 +12,11 @@ const routes = [
     path: '/get-started',
     name: 'install',
     component: installView
+  },
+  {
+    path: '/react',
+    name: 'react-usage',
+    component: reactView
   }
 ];
 

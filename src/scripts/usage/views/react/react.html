@@ -1,0 +1,136 @@
+<tc-viewport>
+  <tc-container size="sm">
+    <t-row>
+      <t-col>
+        <h1>React Usage</h1>
+        <p>
+          You can easily plug Taslonic in your React project. Taslonic
+          integrates smoothly with projects manually configured or generated
+          with Create React App.
+        </p>
+      </t-col>
+    </t-row>
+    <t-row offset="6">
+      <t-col>
+        <h2>Using JavaScript and CSS separately</h2>
+        <p>
+          In times where styled-components are a thing, importing CSS files can
+          sound unusual. But, if you prefer to keep styles apart of your
+          JavaScript, you can do it smoothly using Taslonic.
+        </p>
+        <p>
+          Import the CSS in the file where you mount your application.
+        </p>
+        <tc-code lang="javascript">
+          import '@glorious/taslonic/taslonic.css';
+          // All the other things your app needs
+
+          ReactDOM.render( ... );
+        </tc-code>
+        <p>
+          Then, import Taslonic components wherever you need them.
+        </p>
+        <tc-code lang="javascript">
+          import React from 'react';
+          import { Button, alert } from '@glorious/taslonic/react';
+
+          export const MyComponent = () => {
+            const handleClick = () => {
+              alert.open({
+                content: &lt;p&gt;I am an &lt;strong&gt;alert&lt;/strong&gt;.&lt;/p&gt;
+              });
+            };
+
+            return (
+              &lt;Button onClick={handleClick}&gt;
+                Click Here
+              &lt;Button&gt;
+            );
+          };
+        </tc-code>
+      </t-col>
+    </t-row>
+    <t-row offset="3">
+      <t-col>
+        <h2>Using JavaScript and CSS together</h2>
+        <p>
+          If you prefer to get rid with the CSS import declaration, no problem.
+          Taslonic also contains a bundle with all styles included.
+        </p>
+        <tc-code lang="javascript">
+          import React from 'react';
+          import { Button, alert } from '@glorious/taslonic/react/styled';
+
+          export const MyComponent = () => {
+            const handleClick = () => {
+              alert.open({
+                content: &lt;p&gt;I am an &lt;strong&gt;alert&lt;/strong&gt;.&lt;/p&gt;
+              });
+            };
+
+            return (
+              &lt;Button onClick={handleClick}&gt;
+                Click Here
+              &lt;Button&gt;
+            );
+          };
+        </tc-code>
+      </t-col>
+    </t-row>
+    <t-row offset="3">
+      <t-col>
+        <h2>Using Taslonic globally</h2>
+        <p>
+          If your project is not using ES6 modules or you just wanna give
+          Taslonic a quick try, here is how you can use Taslonic globally.
+        </p>
+      </t-col>
+    </t-row>
+  </tc-container>
+  <tc-container>
+    <t-row offset="3">
+      <t-col>
+        <tc-code lang="xml">
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang=&quot;en&quot;&gt;
+            &lt;head&gt;
+              &lt;meta charset=&quot;utf-8&quot;&gt;
+              &lt;title&gt;Taslonic: Standalone React&lt;/title&gt;
+              &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=5&quot;&gt;
+              &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@glorious/taslonic/taslonic.css&quot;&gt;
+              &lt;script src=&quot;https://cdn.jsdelivr.net/npm/@babel/standalone@7.13.8/babel.min.js&quot;&gt;&lt;/script&gt;
+              &lt;script src=&quot;https://cdn.jsdelivr.net/npm/react@16.14.0/umd/react.production.min.js&quot;&gt;&lt;/script&gt;
+              &lt;script src=&quot;https://cdn.jsdelivr.net/npm/react-dom@16.14.0/umd/react-dom.production.min.js&quot;&gt;&lt;/script&gt;
+              &lt;script src=&quot;https://cdn.jsdelivr.net/npm/@glorious/taslonic/react/index.js&quot;&gt;&lt;/script&gt;
+              &lt;style media=&quot;screen&quot;&gt;
+                html, body {
+                  font-family: Arial, sans-serif;
+                }
+              &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;div data-root&gt;&lt;/div&gt;
+              &lt;script type=&quot;text/babel&quot;&gt;
+                (function(){
+                  const { Button, alert } = taslonicReact;
+
+                  const Example = () => {
+                    const openAlert = () => {
+                      alert.open({ content: &lt;p>Great, it works!&lt;/p&gt; })
+                    }
+
+                    return (
+                      &lt;Button onClick={openAlert}&gt;Click Here&lt;/Button&gt;
+                    );
+                  };
+
+                  ReactDOM.render(&lt;Example /&gt;, document.querySelector('[data-root]'));
+                }());
+              &lt;/script&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+        </tc-code>
+      </t-col>
+    </t-row>
+  </tc-container>
+</tc-viewport>
