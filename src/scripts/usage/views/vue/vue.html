@@ -4,7 +4,7 @@
       <t-col>
         <h1>Vue Usage</h1>
         <p>
-          You can easily plug Taslonic in your Vue project. Taslonic
+          You can easily plug Taslonic into your Vue project. Taslonic
           integrates smoothly with projects manually configured or generated
           with Vue CLI.
         </p>
@@ -14,11 +14,11 @@
       <t-col>
         <h2>Setup</h2>
         <p>
-          To make the exeprience of showing dialogs easier, some of Taslonic
-          components need to compile their templates at runtime. To do so,
-          you need to make a little tweak in your project configuration.
+          To make the experience of showing dialogs easier, some of the
+          Taslonic components need to compile their templates at runtime.
+          To do so, a little tweak in your project configuration is necessary.
           Below, you can check how to make this fine adjustment on Webpack or
-          on the configuration file for an application generated with Vue CLI.
+          the configuration file for an application generated with Vue CLI.
         </p>
       </t-col>
     </t-row>
@@ -102,11 +102,11 @@
     </t-row>
     <t-row offset="3">
       <t-col>
-        <h2>Using Taslonic as plugin</h2>
+        <h2>Using Taslonic as a plugin</h2>
         <p>
           You can also use Taslonic in your Vue project as a plugin. The
-          following code register Taslonic in advance, so you  don’t need to
-          import all its components in every module you need them.
+          following code registers all Taslonic components in advance, so
+          you don’t need to import them anywhere else.
         </p>
         <tc-code lang="javascript">
           import '@glorious/taslonic/taslonic.css';
@@ -123,7 +123,7 @@
       <t-col>
         <h2>Using Taslonic globally</h2>
         <p>
-          If your project is not using ES6 modules or you just wanna give
+          If your project is not using ES6 modules or you want to give
           Taslonic a quick try, here is how you can use Taslonic globally.
         </p>
       </t-col>
@@ -175,6 +175,40 @@
             &lt;/body&gt;
           &lt;/html&gt;
         </tc-code>
+      </t-col>
+    </t-row>
+  </tc-container>
+  <tc-container size="sm">
+    <t-row offset="6">
+      <t-col>
+        <h2>Time to build something!</h2>
+        <p>
+          Now that you have plugged Taslonic in your project, you can inspect
+          every component in detail by visiting the live documentation or
+          dig a little deeper about Taslonic UI fundamentals.
+        </p>
+      </t-col>
+    </t-row>
+    <t-row>
+      <t-col sm="4">
+        <t-button
+          tag="a"
+          theme="primary"
+          href="https://components.taslonic.com/#!/components/vue/alert"
+          target="_blank"
+          rel="noopener"
+          block>
+          Live Documentation
+        </t-button>
+      </t-col>
+      <t-col sm="4">
+        <t-button
+          tag="a"
+          theme="secondary"
+          href="/fundamentals"
+          block>
+          Fundamentals
+        </t-button>
       </t-col>
     </t-row>
   </tc-container>

@@ -8,9 +8,10 @@ _public.getRoutes = () => {
 function getRoutePaths(){
   return [
     '/',
-    '/get-started',
+    '/installation',
     '/react',
     '/vue',
+    '/fundamentals',
     '/principles'
   ];
 }

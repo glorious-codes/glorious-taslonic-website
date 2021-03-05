@@ -1,10 +1,10 @@
 import { shallowMount } from '@vue/test-utils';
 import { tcViewport } from '@scripts/base/components/viewport/viewport'
-import installView from './install';
+import fundamentalsView from './fundamentals';
 
-describe('Install View', () => {
+describe('Components View', () => {
   function mount(){
-    return shallowMount(installView);
+    return shallowMount(fundamentalsView);
   }
 
   it('should contain a viewport', () => {

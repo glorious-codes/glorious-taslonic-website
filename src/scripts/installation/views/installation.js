@@ -1,19 +1,20 @@
-import { tCol, tRow } from '@glorious/taslonic/vue';
+import { tCol, tRow, tButton } from '@glorious/taslonic/vue';
 import { tcCode } from '@scripts/base/components/code/code';
 import { tcContainer } from '@scripts/base/components/container/container';
 import { tcViewport } from '@scripts/base/components/viewport/viewport';
 import seoService from '@scripts/base/services/seo/seo';
-import template from './install.html';
+import template from './installation.html';
 
 const head = seoService.buildHead({
-  title: 'Get Started',
-  description: 'Get started with Taslonic. A component library that makes form creation and data fetching really simple.',
-  keywords: 'taslonic, ui, components, form creation, react, vue, data fetching'
+  title: 'Installation',
+  description: 'You can install Taslonic in your project either using a Package Manager or getting it directly from a CDN.',
+  keywords: 'taslonic, ui, components, installation, react, vue, npm, yarn'
 });
 
 const installView = {
   name: 'tc-install-view',
   components: {
+    tButton,
     tCol,
     tRow,
     tcCode,

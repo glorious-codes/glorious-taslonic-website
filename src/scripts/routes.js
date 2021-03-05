@@ -1,7 +1,8 @@
 import homeView from '@scripts/home/views/home';
-import installView from '@scripts/install/views/install';
+import installationView from '@scripts/installation/views/installation';
 import reactView from '@scripts/usage/views/react/react';
 import vueView from '@scripts/usage/views/vue/vue';
+import fundamentalsView from '@scripts/fundamentals/views/fundamentals';
 import principlesView from '@scripts/principles/views/principles';
 
 const routes = [
@@ -11,9 +12,9 @@ const routes = [
     component: homeView
   },
   {
-    path: '/get-started',
-    name: 'install',
-    component: installView
+    path: '/installation',
+    name: 'installation',
+    component: installationView
   },
   {
     path: '/react',
@@ -24,6 +25,11 @@ const routes = [
     path: '/vue',
     name: 'vue-usage',
     component: vueView
+  },
+  {
+    path: '/fundamentals',
+    name: 'fundamentals',
+    component: fundamentalsView
   },
   {
     path: '/principles',
