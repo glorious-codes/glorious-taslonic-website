@@ -1,0 +1,10 @@
+<div class="tc-sidebar" :class="classes" :aria-hidden="!isVisible">
+  <t-button
+    theme="lookless"
+    arial-label="close"
+    class="tc-sidebar-close-button"
+    @click="() => setVisibility(false)">
+    <tc-icon name="arrow" />
+  </t-button>
+  <tc-menu />
+</div>

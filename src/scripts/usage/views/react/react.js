@@ -6,7 +6,7 @@ import seoService from '@scripts/base/services/seo/seo';
 import template from './react.html';
 
 const head = seoService.buildHead({
-  title: 'React Usage',
+  title: 'React',
   description: 'You can easily plug Taslonic into your React project. Taslonic integrates smoothly with projects manually configured or generated with Create React App.',
   keywords: 'taslonic, ui, usage, react'
 });

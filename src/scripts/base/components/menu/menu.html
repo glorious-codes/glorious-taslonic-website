@@ -1,0 +1,9 @@
+<nav class="tc-menu">
+  <ul>
+    <li v-for="route in routes">
+      <tc-link :routeName="route.name">
+        {{ route.name }}
+      </tc-link>
+    </li>
+  </ul>
+</nav>

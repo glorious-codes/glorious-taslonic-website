@@ -6,6 +6,12 @@ background-image($filename, $path = $path-images)
   else
     background-image url($path + $filename)
 
+mask($repeat, $size)
+  -webkit-mask-repeat $repeat
+  -webkit-mask-size   $size
+  mask-repeat         $repeat
+  mask-size           $size
+
 breakpoint($size)
   if($size == 'xs')
     @media screen and (min-width 0)

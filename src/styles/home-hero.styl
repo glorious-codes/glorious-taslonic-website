@@ -10,9 +10,11 @@ $color-action-shadow = #405CFF
   background linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(103,114,255,1) 50%)
   overflow hidden
   .tc-topbar-content
-    justify-content center
     max-width 800px
     background-color $color-lightest
+  .tc-logo
+      img
+        width 100px
 
 .tc-home-hero-content
   position relative
@@ -121,8 +123,16 @@ $color-action-shadow = #405CFF
 +breakpoint('sm')
   .tc-home-hero
     .tc-topbar-content
-      display flex
       justify-content center
+    .tc-topbar-curve
+      display block
+      position absolute
+      bottom 0
+      right -150px
+      width 150px
+      height 150px
+      path
+        fill $color-lightest
   .tc-home-hero-content
     align-items center
     h1
@@ -135,25 +145,13 @@ $color-action-shadow = #405CFF
     align-items center
     margin 0 0 0 10px
 
-+breakpoint('sm')
-  .tc-home-hero
-    .tc-topbar-curve
-      display block
-      position absolute
-      bottom 0
-      right -150px
-      width 150px
-      height 150px
-      path
-        fill $color-lightest
-
 +breakpoint('md')
   .tc-home-hero
     .tc-topbar-content
       justify-content flex-start
       padding 0
       height 150px
-      .tc-logo
+    .tc-logo
         img
           width 150px
   .tc-home-hero-content

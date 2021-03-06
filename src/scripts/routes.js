@@ -1,41 +1,30 @@
-import homeView from '@scripts/home/views/home';
-import installationView from '@scripts/installation/views/installation';
-import reactView from '@scripts/usage/views/react/react';
-import vueView from '@scripts/usage/views/vue/vue';
-import fundamentalsView from '@scripts/fundamentals/views/fundamentals';
-import principlesView from '@scripts/principles/views/principles';
-
-const routes = [
+module.exports = [
   {
     path: '/',
     name: 'home',
-    component: homeView
   },
   {
     path: '/installation',
     name: 'installation',
-    component: installationView
-  },
-  {
-    path: '/react',
-    name: 'react-usage',
-    component: reactView
+    shouldShowInMenu: true
   },
   {
     path: '/vue',
-    name: 'vue-usage',
-    component: vueView
+    name: 'vue',
+    shouldShowInMenu: true
+  },
+  {
+    path: '/react',
+    name: 'react',
+    shouldShowInMenu: true
   },
   {
     path: '/fundamentals',
     name: 'fundamentals',
-    component: fundamentalsView
+    shouldShowInMenu: true
   },
   {
     path: '/principles',
-    name: 'principles',
-    component: principlesView
+    name: 'principles'
   }
 ];
-
-export default routes;

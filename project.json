@@ -49,7 +49,7 @@
   "tests": {
     "source": {
       "files": [
-        "src/scripts/**/!(app|routes).js",
+        "src/scripts/**/!(app|router).js",
         "!src/scripts/**/mocks/**/*.js"
       ]
     }

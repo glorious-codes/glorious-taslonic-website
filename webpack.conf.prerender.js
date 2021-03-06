@@ -1,3 +1,5 @@
+const routes = require('./src/scripts/routes');
+
 const _public = {};
 
 _public.getRoutes = () => {
@@ -6,14 +8,7 @@ _public.getRoutes = () => {
 };
 
 function getRoutePaths(){
-  return [
-    '/',
-    '/installation',
-    '/react',
-    '/vue',
-    '/fundamentals',
-    '/principles'
-  ];
+  return routes.map(route => route.path);
 }
 
 module.exports = _public;

@@ -1,8 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import { tcFeatureCardList } from '@scripts/base/components/feature-card-list/feature-card-list';
-import { tcFooter } from '@scripts/base/components/footer/footer';
-import { tcLogo } from '@scripts/base/components/logo/logo';
-import { tcTopbar } from '@scripts/base/components/topbar/topbar';
+import { tcViewport } from '@scripts/base/components/viewport/viewport';
 import { tcHomeHero } from '@scripts/home/components/home-hero/home-hero';
 import homeView from './home';
 
@@ -26,8 +24,8 @@ describe('Home View', () => {
     expect(wrapper.findAllComponents(tcFeatureCardList)).toHaveLength(1);
   });
 
-  it('should contain a footer', () => {
+  it('should contain a viewport', () => {
     const wrapper = mount();
-    expect(wrapper.findAllComponents(tcFooter)).toHaveLength(1);
+    expect(wrapper.findAllComponents(tcViewport)).toHaveLength(1);
   });
 });

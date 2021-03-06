@@ -1,5 +1,15 @@
+@require '_variables'
+
 .tc-viewport
-  .tc-topbar
-    margin-bottom 50px
+  padding-top 125px
+  &.tc-viewport-topbar-hidden
+    padding-top 0
+  .tc-topbar:not(.tc-home-hero-topbar)
+    position fixed
+    top 0
+    left 0
+    width 100%
+    background-color rgba(255, 255, 255, 0.95)
+    z-index $layer-lowest
   .tc-section
     margin 100px 0

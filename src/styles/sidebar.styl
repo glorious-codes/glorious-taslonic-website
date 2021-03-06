@@ -1,0 +1,34 @@
+@require '_variables'
+
+.tc-sidebar
+  position fixed
+  top 0
+  right 0
+  padding-top 80px
+  width 80%
+  max-width 400px
+  height 100vh
+  background-color $color-grey-lighter
+  border-left 1px solid $color-grey-light
+  box-sizing border-box
+  z-index $layer-low
+  transition right 300ms ease-in-out
+  &.tc-sidebar-hidden
+    right -100%
+  .tc-sidebar-close-button
+    position absolute
+    top 40px
+    right 40px
+    &.t-button.t-button-lookless:focus
+      border-bottom 0
+  .tc-menu
+    a
+      padding 20px 40px
+      width 100%
+      font-size $font-size-xs
+      box-sizing border-box
+    ul
+      display flex
+      flex-direction column
+    li:not(:first-child)
+      margin-left 0

@@ -1,6 +1,18 @@
 <div class="tc-topbar">
   <div class="tc-topbar-content">
-    <tc-logo />
+    <tc-link routeName="home">
+      <tc-logo :width="logoWidth" :height="logoHeight" />
+    </tc-link>
+    <tc-menu v-if="!isMobileScreen" />
+    <t-button
+      v-if="isMobileScreen"
+      theme="lookless"
+      aria-label="menu"
+      class="tc-topbar-menu-button"
+      @click="onMenuButtonClick"
+      data-topbar-menu-button>
+      <tc-icon name="menu" />
+    </t-button>
     <div class="tc-topbar-curve">
       <svg width="150px" height="150px" viewBox="0 0 150 150">
         <path d="M0,0v150c22,0,49-15.6,60-34.6L100,46l26.6-46H0z"/>

@@ -1,0 +1,24 @@
+@require '_variables'
+
+.tc-menu
+  .tc-link
+    display flex
+    a
+      color alpha($color-grey-dark, .75)
+      font-size $font-size-xxs
+      font-weight bold
+      text-transform uppercase
+      text-decoration none
+      line-height 1
+      &:hover,
+      &:focus,
+      &:active,
+      &.router-link-exact-active
+        color $color-purple
+  ul
+    display flex
+    margin 0
+    padding 0
+    list-style-type none
+  li:not(:first-child)
+    margin-left 30px
