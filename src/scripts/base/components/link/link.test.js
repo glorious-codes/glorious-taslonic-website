@@ -40,6 +40,6 @@ describe('Link', () => {
 
   it('should anchor links contain a rel attribute as noreferrer by default', () => {
     const wrapper = mountComponent({ href: 'https://pitsby.com' });
-    expect(wrapper.find('a').attributes('rel')).toEqual('noreferrer');
+    expect(wrapper.find('a').attributes('rel')).toEqual('noopener noreferrer');
   });
 });
