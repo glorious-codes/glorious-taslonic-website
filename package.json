@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "@glorious/rasket": "^0.1.2",
-    "@glorious/taslonic": "^1.1.4",
+    "@glorious/taslonic": "^1.2.0",
     "highlight.js": "^9.18.5",
     "vue": "^2.6.11",
     "vue-head": "^2.2.0",
