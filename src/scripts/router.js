@@ -14,7 +14,10 @@ function buildRouter(){
       route.component = views[route.name];
       return route;
     }),
-    mode: 'history'
+    mode: 'history',
+    scrollBehavior () {
+      return { x: 0, y: 0 };
+    }
   });
 }
 
