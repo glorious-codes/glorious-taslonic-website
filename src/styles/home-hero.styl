@@ -76,20 +76,24 @@ $color-action-shadow = #405CFF
         box-shadow 0 10px 15px $color-action-shadow
         border-color $color-action-light
         outline 0
-  .t-button
-    min-width 180px
-    box-shadow 0 0 0 $color-action-shadow
-  .t-button-primary
-    background-color $color-action
-    color $color-purple
-    border-color $color-action
-    transition all 300ms
-    &:hover,
-    &:focus,
-    $:active
-      background-color $color-action-light
-      box-shadow 0 10px 15px $color-action-shadow
+
+.tc-home-hero-primary-action
+  &.tc-link
+    a
+      width 100%
+      background-color $color-action
+      color $color-purple
       border-color $color-action
+      box-shadow 0 0 0 $color-action-shadow
+      transition all 300ms
+      box-sizing border-box
+      &:hover,
+      &:focus,
+      $:active
+        background-color $color-action-light
+        color $color-purple
+        box-shadow 0 10px 15px $color-action-shadow
+        border-color $color-action
 
 .tc-home-hero-star-action-container
   display flex
@@ -138,6 +142,10 @@ $color-action-shadow = #405CFF
     h1
       max-width 550px
       text-align center
+  .tc-home-hero-primary-action
+    &.tc-link
+      a
+        max-width 180px
   .tc-home-hero-actions
     flex-direction row
     justify-content center
