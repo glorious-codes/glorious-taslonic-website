@@ -1,4 +1,4 @@
-import { tCol, tRow, tButton } from '@glorious/taslonic/vue';
+import { tCol, tRow, tButton, tBanner } from '@glorious/taslonic/vue';
 import { tcCode } from '@scripts/base/components/code/code';
 import { tcContainer } from '@scripts/base/components/container/container';
 import { tcViewport } from '@scripts/base/components/viewport/viewport';
@@ -14,6 +14,7 @@ const head = seoService.buildHead({
 const reactView = {
   name: 'tc-react-view',
   components: {
+    tBanner,
     tButton,
     tCol,
     tRow,
