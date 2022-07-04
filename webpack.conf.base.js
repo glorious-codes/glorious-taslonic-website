@@ -7,12 +7,18 @@ const env = process.env.NODE_ENV || 'development';
 
 module.exports = {
   entry: [`${__dirname}/${project.scripts.source.entry}`],
+  output: {
+    filename: project.scripts.dist.filename[env]
+  },
   module: {
     rules: [
       {
         test: /\.html$/,
         include: [`${__dirname}/${project.scripts.source.root}`],
-        use: 'html-loader'
+        loader: 'html-loader',
+        options: {
+          minimize: false
+        }
       },
       {
         test: /\.css$/,
@@ -49,10 +55,10 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: project.index.source.file,
-      minify: {
-        collapseWhitespace: true
-      }
+      template: project.index.source.file
+    }),
+    new MiniCssExtractPlugin({
+      filename: project.styles.dist.filename[env]
     }),
     new CopyWebpackPlugin([{
       from: project.images.source.files,

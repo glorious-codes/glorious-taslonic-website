@@ -1,20 +1,18 @@
 const webpack = require('webpack');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
-const PrerenderSPAPlugin = require('prerender-spa-plugin');
+const PrerenderSPAPlugin = require('prerender-spa-plugin-next');
 const Renderer = PrerenderSPAPlugin.PuppeteerRenderer;
 const prerenderConfig = require('./webpack.conf.prerender');
 const project = require('./project.json');
 
 module.exports = {
   mode: 'production',
-  devtool: 'cheap-source-map',
-  output: {
-    filename: project.scripts.dist.filename.prod
-  },
+  devtool: 'source-map',
   optimization: {
     minimizer: [
+      new webpack.SourceMapDevToolPlugin(),
+      new CssMinimizerPlugin(),
       new TerserPlugin({
         terserOptions: {
           mangle: true,
@@ -23,15 +21,10 @@ module.exports = {
           },
           sourceMap: true
         }
-      }),
-      new OptimizeCSSAssetsPlugin()
+      })
     ]
   },
   plugins: [
-    new webpack.SourceMapDevToolPlugin(),
-    new MiniCssExtractPlugin({
-      filename: project.styles.dist.filename.prod
-    }),
     new PrerenderSPAPlugin({
       staticDir: `${__dirname}/${project.scripts.dist.root}`,
       routes: prerenderConfig.getRoutes(),
@@ -42,10 +35,11 @@ module.exports = {
         keepClosingSlash: true,
         sortAttributes: true
       },
-      renderer: new Renderer({
+      renderer: require('@prerenderer/renderer-puppeteer'),
+      rendererOptions: {
         headless: true,
         args: ['–no-sandbox', '–disable-setuid-sandbox']
-      })
+      }
     })
   ]
 }
