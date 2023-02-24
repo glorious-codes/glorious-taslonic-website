@@ -47,6 +47,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "@glorious/analytics": "^0.4.0",
     "@glorious/rasket": "^0.1.2",
     "@glorious/taslonic": "^1.2.0",
     "highlight.js": "^9.18.5",

@@ -9,6 +9,7 @@ import javascript from 'highlight.js/lib/languages/javascript';
 import xml from 'highlight.js/lib/languages/xml';
 import { router } from '@scripts/router';
 import analyticsService from '@scripts/base/services/analytics/analytics';
+import routeService from '@scripts/base/services/route/route';
 import template from '@scripts/app.html';
 
 Vue.use(VueHead, { separator: '', complement: '' });
@@ -17,6 +18,7 @@ Vue.use(VueHighlightJS, { languages: { javascript, xml } });
 
 const app = { name: 'app', template };
 
+routeService.setRouter(router);
 analyticsService.init();
 
 /* eslint-disable no-unused-vars */
