@@ -20,7 +20,7 @@ export const tcSidebar = {
     };
   },
   created(){
-    this.setSubscriptionId(rasket.subscribe(MENU_BUTTON_CLICKED, this.onMenuButtonClick))
+    this.setSubscriptionId(rasket.subscribe(MENU_BUTTON_CLICKED, this.onMenuButtonClick));
   },
   beforeDestroy(){
     rasket.unsubscribe(this.subscriptionId);

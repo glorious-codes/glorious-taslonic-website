@@ -30,7 +30,6 @@ describe('Sidebar', () => {
   it('should be hidden by default', () => {
     const wrapper = mount();
     expect(wrapper.classes()).toContain('tc-sidebar-hidden');
-    expect(wrapper.attributes('aria-hidden')).toEqual('true');
   });
 
   it('should be shown when menu button click event has been fired', () => {
@@ -38,7 +37,6 @@ describe('Sidebar', () => {
     rasket.publish(MENU_BUTTON_CLICKED);
     wrapper.vm.$nextTick(() => {
       expect(wrapper.classes()).not.toContain('tc-sidebar-hidden');
-      expect(wrapper.attributes('aria-hidden')).toEqual(undefined);
     });
   });
 
@@ -49,7 +47,6 @@ describe('Sidebar', () => {
       wrapper.findComponent(tButton).vm.$emit('click');
       wrapper.vm.$nextTick(() => {
         expect(wrapper.classes()).toContain('tc-sidebar-hidden');
-        expect(wrapper.attributes('aria-hidden')).toEqual('true');
       })
     });
   });

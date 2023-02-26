@@ -2,11 +2,16 @@ import { shallowMount } from '@vue/test-utils';
 import { tcFooter } from '@scripts/base/components/footer/footer';
 import { tcSidebar } from '@scripts/base/components/sidebar/sidebar';
 import { tcTopbar } from '@scripts/base/components/topbar/topbar';
+import windowService from '@scripts/base/services/window/window';
 import { tcViewport } from './viewport';
 
 describe('Viewport', () => {
   function mount(propsData = {}, content = ''){
     return shallowMount(tcViewport, { propsData, slots: { default: content } });
+  }
+
+  function simulateWindowWidth(width){
+    windowService.getInnerWidth = jest.fn(() => width);
   }
 
   it('should have base css class', () => {
@@ -40,9 +45,40 @@ describe('Viewport', () => {
     expect(wrapper.find('p').text()).toEqual('Hello');
   });
 
-  it('should contain a sidebar', () => {
+  it('should show sidebar on screens smaller than 768px', () => {
+    simulateWindowWidth(767);
     const wrapper = mount();
-    const sidebars = wrapper.findAllComponents(tcSidebar);
-    expect(sidebars).toHaveLength(1);
+    const sidebar = wrapper.findAllComponents(tcSidebar);
+    expect(sidebar).toHaveLength(1);
+  });
+
+  it('should not show sidebar on screens bigger than 768px', () => {
+    simulateWindowWidth(769);
+    const wrapper = mount();
+    const sidebar = wrapper.findAllComponents(tcSidebar);
+    expect(sidebar).toHaveLength(0);
+  });
+
+  it('should remove sidebar if window width gets bigger than 768px', () => {
+    const windowEvents = {};
+    simulateWindowWidth(767);
+    windowService.listen = jest.fn((evtName, callback) => {
+      windowEvents[evtName] = callback;
+    });
+    const wrapper = mount();
+    const sidebar = wrapper.findAllComponents(tcSidebar);
+    expect(sidebar).toHaveLength(1)
+    simulateWindowWidth(769);
+    windowEvents.resize();
+    wrapper.vm.$nextTick(() => {
+      expect(wrapper.findAllComponents(tcSidebar)).toHaveLength(0)
+    });
+  });
+
+  it('should unlisten window resize on component destroy', () => {
+    windowService.unlisten = jest.fn();
+    const wrapper = mount();
+    wrapper.destroy();
+    expect(windowService.unlisten).toHaveBeenCalledWith('resize', wrapper.vm.handleWindowResize);
   });
 });

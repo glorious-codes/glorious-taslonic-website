@@ -1,6 +1,6 @@
 <main class="tc-viewport" :class="classes">
-  <tc-sidebar />
-  <tc-topbar logoWidth="100px" logoHeight="18px" v-if="!hideTopbar"/>
+  <tc-sidebar v-if="isMobileScreen" />
+  <tc-topbar logoWidth="100px" logoHeight="18px" v-if="!hideTopbar" />
   <article class="tc-viewport-content">
     <slot></slot>
   </article>
