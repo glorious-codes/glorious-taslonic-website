@@ -1,8 +1,8 @@
 <span class="tc-link">
-  <router-link v-if="routeName" role="link" :to="{ name: routeName }">
+  <router-link v-if="routeName" role="link" :to="{ name: routeName }" :aria-label="ariaLabel">
     <slot></slot>
   </router-link>
-  <a v-if="href" :title="href" role="link" :href="href" rel="noopener noreferrer" target="_blank">
+  <a v-if="href" :title="href" role="link" :href="href" rel="noopener noreferrer" target="_blank" :aria-label="ariaLabel">
     <slot></slot>
   </a>
 </span>

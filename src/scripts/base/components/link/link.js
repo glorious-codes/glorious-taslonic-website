@@ -9,6 +9,9 @@ export const tcLink = {
     },
     routeName: {
       type: String
+    },
+    ariaLabel: {
+      type: String
     }
   },
   template
