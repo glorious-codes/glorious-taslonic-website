@@ -4,7 +4,7 @@
   "description": "Taslonic's website",
   "main": "src/scripts/app.js",
   "scripts": {
-    "build": "webpack",
+    "build": "node --trace-deprecation ./node_modules/.bin/webpack",
     "format": "eslint ./src/**/*.js",
     "start": "webpack-dev-server",
     "test": "jest",
@@ -25,7 +25,7 @@
     "babel-jest": "^28.1.2",
     "babel-loader": "^8.1.0",
     "codecov": "^3.6.1",
-    "copy-webpack-plugin": "^5.1.1",
+    "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^3.4.1",
     "css-minimizer-webpack-plugin": "^4.0.0",
     "eslint": "^8.19.0",

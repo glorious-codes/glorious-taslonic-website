@@ -60,9 +60,11 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: project.styles.dist.filename[env]
     }),
-    new CopyWebpackPlugin([{
-      from: project.images.source.files,
-      to: `${project.images.dist.root}/[name].[ext]`
-    }])
+    new CopyWebpackPlugin({
+      patterns: [{
+        from: project.images.source.files,
+        to: `${project.images.dist.root}/[name][ext]`
+      }]
+    })
   ]
 }
