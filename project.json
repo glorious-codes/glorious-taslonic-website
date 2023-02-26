@@ -38,7 +38,11 @@
       "files": "src/images/**/*.*"
     },
     "dist": {
-      "root": "images"
+      "root": "images",
+      "filename": {
+        "production": "assets/images/[name]-[contenthash][ext]",
+        "development": "assets/images/[name][ext]"
+      }
     }
   },
   "fonts": {

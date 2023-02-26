@@ -8,7 +8,8 @@ const env = process.env.NODE_ENV || 'development';
 module.exports = {
   entry: [`${__dirname}/${project.scripts.source.entry}`],
   output: {
-    filename: project.scripts.dist.filename[env]
+    filename: project.scripts.dist.filename[env],
+    assetModuleFilename: project.images.dist.filename[env]
   },
   module: {
     rules: [
@@ -29,13 +30,9 @@ module.exports = {
         use: [ MiniCssExtractPlugin.loader, 'css-loader', 'stylus-loader' ]
       },
       {
-        test: /\.(png|jpe?g|gif|svg)$/i,
-        loader: 'file-loader',
-        options: {
-          outputPath: project.images.dist.root,
-          name: '[name].[ext]'
-        }
-      },
+        test: /\.(jpg|jpeg|png|svg)/,
+        type: 'asset/resource'
+       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
