@@ -25,10 +25,10 @@ export const tcTopbar = {
     };
   },
   created(){
-    windowService.listen('resize', this.handleWindowResize)
+    windowService.listen('resize', this.handleWindowResize);
   },
   beforeDestroy(){
-    windowService.unlisten('resize', this.handleWindowResize)
+    windowService.unlisten('resize', this.handleWindowResize);
   },
   methods: {
     handleWindowResize(){

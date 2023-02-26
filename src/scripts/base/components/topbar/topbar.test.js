@@ -40,7 +40,7 @@ describe('Topbar', () => {
     expect(menus).toHaveLength(1);
   });
 
-  it('should remove menu if window width get smaller than 768px', () => {
+  it('should remove menu if window width gets smaller than 768px', () => {
     const windowEvents = {};
     simulateWindowWidth(1024);
     windowService.listen = jest.fn((evtName, callback) => {
@@ -63,7 +63,7 @@ describe('Topbar', () => {
     expect(buttons).toHaveLength(1)
   });
 
-  it('should remove menu button if window width get bigger than 767px', () => {
+  it('should remove menu button if window width gets bigger than 767px', () => {
     const windowEvents = {};
     simulateWindowWidth(767);
     windowService.listen = jest.fn((evtName, callback) => {
