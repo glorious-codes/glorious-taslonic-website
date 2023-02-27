@@ -2,35 +2,35 @@ module.exports = [
   {
     path: '/',
     name: 'home',
-    component: () => import('./home/views/home')
+    component: () => import(/* webpackChunkName: 'home' */ './home/views/home')
   },
   {
     path: '/installation',
     name: 'installation',
-    component: () => import('./installation/views/installation'),
+    component: () => import(/* webpackChunkName: 'installation' */ './installation/views/installation'),
     shouldShowInMenu: true
   },
   {
     path: '/vue',
     name: 'vue',
-    component: () => import('./usage/views/vue/vue'),
+    component: () => import(/* webpackChunkName: 'usage-vue' */ './usage/views/vue/vue'),
     shouldShowInMenu: true
   },
   {
     path: '/react',
     name: 'react',
-    component: () => import('./usage/views/react/react'),
+    component: () => import(/* webpackChunkName: 'usage-react' */ './usage/views/react/react'),
     shouldShowInMenu: true
   },
   {
     path: '/fundamentals',
     name: 'fundamentals',
-    component: () => import('./fundamentals/views/fundamentals'),
+    component: () => import(/* webpackChunkName: 'fundamentals' */ './fundamentals/views/fundamentals'),
     shouldShowInMenu: true
   },
   {
     path: '/principles',
     name: 'principles',
-    component: () => import('./principles/views/principles')
+    component: () => import(/* webpackChunkName: 'principles' */ './principles/views/principles')
   }
 ];
