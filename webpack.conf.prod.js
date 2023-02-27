@@ -35,6 +35,10 @@ module.exports = {
         keepClosingSlash: true,
         sortAttributes: true
       },
+      postProcess(renderedRoute) {
+        renderedRoute.html = renderedRoute.html.replace(/src="(.*)\.js"/, 'src="/$1.js"');
+        return renderedRoute;
+      },
       renderer: require('@prerenderer/renderer-puppeteer'),
       rendererOptions: {
         headless: true,
