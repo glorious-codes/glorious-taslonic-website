@@ -1,7 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const project = require('./project.json');
 const env = process.env.NODE_ENV || 'development';
 
@@ -23,11 +22,11 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [ MiniCssExtractPlugin.loader, 'css-loader' ]
+        use: [ 'style-loader', 'css-loader' ]
       },
       {
         test: /\.styl$/,
-        use: [ MiniCssExtractPlugin.loader, 'css-loader', 'stylus-loader' ]
+        use: [ 'style-loader', 'css-loader', 'stylus-loader' ]
       },
       {
         test: /\.(jpg|jpeg|png|svg)/,
@@ -53,9 +52,6 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: project.index.source.file
-    }),
-    new MiniCssExtractPlugin({
-      filename: project.styles.dist.filename[env]
     }),
     new CopyWebpackPlugin({
       patterns: [{
