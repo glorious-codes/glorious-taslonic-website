@@ -54,7 +54,8 @@
     "source": {
       "files": [
         "src/scripts/**/!(app|router|routes).js",
-        "!src/scripts/**/mocks/**/*.js"
+        "!src/scripts/**/mocks/**/*.js",
+        "!src/scripts/vendor/*.js"
       ]
     }
   },
