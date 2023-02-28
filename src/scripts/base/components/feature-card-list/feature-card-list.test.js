@@ -9,7 +9,7 @@ describe('Feature Card List', () => {
 
   it('should have base css class', () => {
     const wrapper = mount();
-    expect(wrapper.classes()).toContain('tc-feature-card-list');
+    expect(wrapper.find('ul').classes()).toContain('tc-feature-card-list');
   });
 
   it('should render three feature cards', () => {
