@@ -15,7 +15,10 @@
         <tc-link href="https://github.com/glorious-codes/glorious-taslonic/stargazers">
           Star
         </tc-link>
-        <ul class="tc-home-hero-star-action-list">
+        <ul
+          class="tc-home-hero-star-action-list"
+          v-if="shouldShowStarActionList"
+          data-home-hero-star-action-list>
           <li style="background-image: url(https://avatars.githubusercontent.com/u/398893?s=180)">
             Zeno Rocha
           </li>
@@ -29,9 +32,6 @@
             Lucas Cunha
           </li>
         </ul>
-        <div class="tc-home-hero-star-action-more">
-          +
-        </div>
       </div>
     </div>
     <div class="tc-home-hero-curve">

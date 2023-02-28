@@ -102,9 +102,18 @@ $color-action-shadow = #405CFF
   margin 20px 0 0
 
 .tc-home-hero-star-action-list
+  position relative
   margin 0 0 0 10px
   padding 0
   list-style-type none
+  &:after
+    content '+'
+    position absolute
+    top 50%
+    right -20px
+    color $color-action
+    font-weight bold
+    transform translateY(-60%)
   li
     display inline-block
     width 30px
@@ -116,13 +125,6 @@ $color-action-shadow = #405CFF
     & + li
       margin-left -12px
       white-space nowrap
-
-.tc-home-hero-star-action-more
-  position relative
-  top -3px
-  left 6px
-  color $color-action
-  font-weight bold
 
 +breakpoint('sm')
   .tc-home-hero

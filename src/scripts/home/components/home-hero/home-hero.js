@@ -11,5 +11,15 @@ export const tcHomeHero = {
     tcLink,
     tcTopbar
   },
+  data(){
+    return {
+      shouldShowStarActionList: false
+    };
+  },
+  mounted(){
+    setTimeout(() => {
+      this.shouldShowStarActionList = true
+    }, 300);
+  },
   template
 };
