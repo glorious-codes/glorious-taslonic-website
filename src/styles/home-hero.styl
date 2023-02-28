@@ -1,13 +1,12 @@
 @require '_variables'
 @require '_mixins'
 
-$color-action = #5FFFFF
-$color-action-light = #AAFFFF
+$color-action = #BDFFFF
 $color-action-shadow = #405CFF
 
 .tc-home-hero
   background rgb(255,255,255)
-  background linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(103,114,255,1) 50%)
+  background linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, $color-purple 50%)
   overflow hidden
   .tc-topbar-content
     max-width 800px
@@ -72,9 +71,9 @@ $color-action-shadow = #405CFF
       &:focus,
       $:active
         background-color alpha($color-purple-dark, .25)
-        color $color-action-light
+        color $color-lightest
         box-shadow 0 10px 15px $color-action-shadow
-        border-color $color-action-light
+        border-color $color-lightest
         outline 0
 
 .tc-home-hero-primary-action
@@ -91,7 +90,7 @@ $color-action-shadow = #405CFF
       &:hover,
       &:focus,
       $:active
-        background-color $color-action-light
+        background-color $color-lightest
         color $color-purple
         box-shadow 0 10px 15px $color-action-shadow
         border-color $color-action
@@ -122,7 +121,7 @@ $color-action-shadow = #405CFF
   position relative
   top -3px
   left 6px
-  color $color-purple-dark
+  color $color-action
   font-weight bold
 
 +breakpoint('sm')
