@@ -2,12 +2,34 @@
   <tc-container size="sm">
     <t-row>
       <t-col>
-        <h1>Vue Usage</h1>
+        <h1>Taslonic for Vue</h1>
         <p>
           <t-banner theme="warning">
             <b>For now, Taslonic has no support for Vue 3</b>.
           </t-banner>
         </p>
+      </t-col>
+    </t-row>
+    <t-row offset="6">
+      <t-col>
+        <h2>Installation</h2>
+        <p>
+          Via <b>NPM</b>:
+        </p>
+        <tc-code>
+          npm install --save @glorious/taslonic-vue
+        </tc-code>
+        <p>
+          Via <b>Yarn</b>:
+        </p>
+        <tc-code>
+          yarn add @glorious/taslonic-vue
+        </tc-code>
+      </t-col>
+    </t-row>
+    <t-row offset="6">
+      <t-col>
+        <h2>Usage</h2>
         <p>
           You can easily plug Taslonic into your Vue project. Taslonic
           integrates smoothly with projects manually configured or generated
@@ -17,7 +39,7 @@
     </t-row>
     <t-row offset="6">
       <t-col>
-        <h2>Setup</h2>
+        <h3>Setup</h3>
         <p>
           To make the experience of showing dialogs easier, some of the
           Taslonic components need to compile their templates at runtime.
@@ -64,14 +86,14 @@
     </t-row>
     <t-row offset="3">
       <t-col>
-        <h2>Using Taslonic components</h2>
+        <h3>Using Taslonic components</h3>
         <p>
           First of all, you need to import Taslonic CSS in the file where you
           mount your application. In applications created with Vue CLI, that
           file use to be named as main.js.
         </p>
         <tc-code lang="javascript">
-          import '@glorious/taslonic/taslonic.css'
+          import '@glorious/taslonic-vue/dist/taslonic.css'
           import Vue from 'vue';
           // All the other things your app needs
 
@@ -88,7 +110,7 @@
           &lt;/template&gt;
 
           &lt;script&gt;
-            import { tButton, alert } from '@glorious/taslonic/vue';
+            import { tButton, alert } from '@glorious/taslonic-vue';
 
             export default {
               name: 'my-component',
@@ -107,16 +129,16 @@
     </t-row>
     <t-row offset="3">
       <t-col>
-        <h2>Using Taslonic as a plugin</h2>
+        <h3>Using Taslonic as a plugin</h3>
         <p>
           You can also use Taslonic in your Vue project as a plugin. The
           following code registers all Taslonic components in advance, so
           you don’t need to import them anywhere else.
         </p>
         <tc-code lang="javascript">
-          import '@glorious/taslonic/taslonic.css';
+          import '@glorious/taslonic-vue/dist/taslonic.css';
           import Vue from 'vue';
-          import taslonic from '@glorious/taslonic/vue/plugin';
+          import taslonic from '@glorious/taslonic-vue/dist/plugin';
 
           Vue.use(taslonic);
 
@@ -126,7 +148,7 @@
     </t-row>
     <t-row offset="3">
       <t-col>
-        <h2>Using Taslonic globally</h2>
+        <h3>Using Taslonic globally</h3>
         <p>
           If your project is not using ES6 modules or you want to give
           Taslonic a quick try, here is how you can use Taslonic globally.
@@ -145,9 +167,9 @@
               &lt;title&gt;Taslonic: Standalone Vue&lt;/title&gt;
               &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, maximum-scale=5&quot;&gt;
               &lt;link href=&quot;https://taslonic.com/images/favicon-taslonic-32x32.png?v=1&quot; rel=&quot;shortcut icon&quot;&gt;
-              &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@glorious/taslonic/taslonic.css&quot;&gt;
+              &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@glorious/taslonic-vue/dist/taslonic.css&quot;&gt;
               &lt;script src=&quot;https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js&quot;&gt;&lt;/script&gt;
-              &lt;script src=&quot;https://cdn.jsdelivr.net/npm/@glorious/taslonic/vue/index.js&quot;&gt;&lt;/script&gt;
+              &lt;script src=&quot;https://cdn.jsdelivr.net/npm/@glorious/taslonic-vue/dist/index.js&quot;&gt;&lt;/script&gt;
               &lt;style media=&quot;screen&quot;&gt;
                 html, body {
                   font-family: Arial, sans-serif;

@@ -8,7 +8,6 @@ module.exports = [
     path: '/installation',
     name: 'installation',
     component: () => import(/* webpackChunkName: 'installation' */ './installation/views/installation'),
-    shouldShowInMenu: true
   },
   {
     path: '/vue',

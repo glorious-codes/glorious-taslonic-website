@@ -15,9 +15,8 @@ describe('Menu', () => {
   it('should contain four items', () => {
     const wrapper = mount();
     const links = wrapper.findAll('tc-link-stub');
-    expect(links.at(0).props('routeName')).toEqual('installation');
-    expect(links.at(1).props('routeName')).toEqual('vue');
-    expect(links.at(2).props('routeName')).toEqual('react');
-    expect(links.at(3).props('routeName')).toEqual('fundamentals');
+    expect(links.at(0).props('routeName')).toEqual('vue');
+    expect(links.at(1).props('routeName')).toEqual('react');
+    expect(links.at(2).props('routeName')).toEqual('fundamentals');
   });
 });
