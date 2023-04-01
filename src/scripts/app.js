@@ -1,4 +1,3 @@
-import '@styles/_native.styl';
 import Vue from 'vue';
 import VueHead from 'vue-head';
 import VueRouter from 'vue-router';
@@ -7,6 +6,7 @@ import analyticsService from '@scripts/base/services/analytics/analytics';
 import routeService from '@scripts/base/services/route/route';
 import template from '@scripts/app.html';
 
+import(/* webpackChunkName: 'native-css' */ '@styles/_native.styl');
 import(/* webpackChunkName: 'hightlight' */ './vendor/hightlight').then(({ init }) => init(Vue));
 import(/* webpackChunkName: 'taslonic-css' */ './vendor/taslonic');
 
