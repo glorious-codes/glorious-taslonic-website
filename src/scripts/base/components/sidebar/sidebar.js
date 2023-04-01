@@ -1,6 +1,6 @@
 import '@styles/sidebar.styl';
 import rasket from '@glorious/rasket';
-import { tButton } from '@glorious/taslonic/vue';
+import { tButton } from '@glorious/taslonic-vue';
 import { MENU_BUTTON_CLICKED } from '@scripts/base/constants/events';
 import { tcIcon } from '@scripts/base/components/icon/icon';
 import { tcMenu } from '@scripts/base/components/menu/menu';

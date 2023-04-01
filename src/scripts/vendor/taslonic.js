@@ -1,1 +1,1 @@
-import '@glorious/taslonic/taslonic.css';
+import '@glorious/taslonic-vue/dist/taslonic.css';

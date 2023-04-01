@@ -1,6 +1,6 @@
 import { shallowMount } from '@vue/test-utils';
 import rasket from '@glorious/rasket';
-import { tButton } from '@glorious/taslonic/vue';
+import { tButton } from '@glorious/taslonic-vue';
 import { MENU_BUTTON_CLICKED } from '@scripts/base/constants/events';
 import windowService from '@scripts/base/services/window/window';
 import { tcLogo } from '@scripts/base/components/logo/logo';

@@ -1,4 +1,4 @@
-import { tCol, tRow } from '@glorious/taslonic/vue';
+import { tCol, tRow } from '@glorious/taslonic-vue';
 import { tcContainer } from '@scripts/base/components/container/container';
 import { tcFeatureCardList } from '@scripts/base/components/feature-card-list/feature-card-list';
 import { tcTopbar } from '@scripts/base/components/topbar/topbar';

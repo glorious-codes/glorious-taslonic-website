@@ -52,7 +52,7 @@
     "@glorious/analytics": "^0.4.0",
     "@glorious/fyzer": "^0.1.10",
     "@glorious/rasket": "^0.1.2",
-    "@glorious/taslonic": "^1.2.0",
+    "@glorious/taslonic-vue": "^1.0.0",
     "highlight.js": "^9.18.5",
     "query-string": "^7.1.1",
     "vue": "^2.6.11",

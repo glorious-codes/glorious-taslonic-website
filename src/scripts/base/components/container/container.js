@@ -1,5 +1,5 @@
 import '@styles/container.styl';
-import { tContainer } from '@glorious/taslonic/vue';
+import { tContainer } from '@glorious/taslonic-vue';
 import template from './container.html';
 
 export const tcContainer = {

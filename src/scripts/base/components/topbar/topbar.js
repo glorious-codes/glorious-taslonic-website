@@ -1,6 +1,6 @@
 import '@styles/topbar.styl';
 import rasket from '@glorious/rasket';
-import { tButton } from '@glorious/taslonic/vue';
+import { tButton } from '@glorious/taslonic-vue';
 import { MENU_BUTTON_CLICKED } from '@scripts/base/constants/events';
 import { tcIcon } from '@scripts/base/components/icon/icon';
 import { tcLink } from '@scripts/base/components/link/link';

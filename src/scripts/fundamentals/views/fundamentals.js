@@ -1,4 +1,4 @@
-import { tButton, tCol, tRow } from '@glorious/taslonic/vue';
+import { tButton, tCol, tRow } from '@glorious/taslonic-vue';
 import { tcCode } from '@scripts/base/components/code/code';
 import { tcContainer } from '@scripts/base/components/container/container';
 import { tcLink } from '@scripts/base/components/link/link';
