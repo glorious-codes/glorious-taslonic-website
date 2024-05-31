@@ -1,6 +1,6 @@
 export default {
   APP: {
-    BASE_URL: 'https://taslonic.com'
+    BASE_URL: 'https://taslonic.compilorama.com'
   },
   ANALYTICS: {
     PLAUSIBLE: {
