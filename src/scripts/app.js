@@ -3,7 +3,6 @@ import VueHead from 'vue-head';
 import VueRouter from 'vue-router';
 import { router } from '@scripts/router';
 import analyticsService from '@scripts/base/services/analytics/analytics';
-import routeService from '@scripts/base/services/route/route';
 import template from '@scripts/app.html';
 
 import(/* webpackChunkName: 'native-css' */ '@styles/_native.styl');
@@ -12,7 +11,6 @@ import(/* webpackChunkName: 'taslonic-css' */ './vendor/taslonic');
 
 Vue.use(VueHead, { separator: '', complement: '' });
 Vue.use(VueRouter);
-routeService.setRouter(router);
 analyticsService.init();
 
 new Vue({

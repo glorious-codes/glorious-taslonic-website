@@ -49,7 +49,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
-    "@glorious/analytics": "^0.4.0",
+    "@compilorama/statorama": "^0.1.0",
     "@glorious/fyzer": "^0.1.10",
     "@glorious/rasket": "^0.1.2",
     "@glorious/taslonic-vue": "^1.1.1",
